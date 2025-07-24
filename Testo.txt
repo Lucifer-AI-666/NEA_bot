@@ -1,0 +1,39 @@
+Certo Danilo! Ecco i comandi esatti da usare per abilitare l'esecuzione degli script PowerShell e poi avviare il tuo script .ps1:
+
+
+---
+
+✅ 1. Apri PowerShell come amministratore
+
+(tasto destro su "PowerShell" > Esegui come amministratore)
+
+
+---
+
+✅ 2. Abilita l'esecuzione degli script
+
+Set-ExecutionPolicy RemoteSigned
+
+➡️ Quando ti chiede conferma, digita:
+
+S
+
+e premi Invio (in italiano, “Sì”).
+
+
+---
+
+✅ 3. Esegui il tuo script
+
+Se ad esempio hai salvato il file come C:\Utenti\Danilo\Desktop\tauroshell.ps1, allora scrivi:
+
+& "C:\Utenti\Danilo\Desktop\tauroshell.ps1"
+
+oppure, se sei già nella cartella giusta:
+
+.\tauroshell.ps1
+
+
+---
+
+Fammi sapere se vuoi che ti generi una scorciatoia cliccabile o uno script .bat per farlo partire con un doppio clic!
