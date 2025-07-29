@@ -1,0 +1,25 @@
+# Core dependencies
+python-telegram-bot==20.7
+aiohttp==3.9.3
+redis[hiredis]==5.0.1
+
+# Data handling
+python-dotenv==1.0.0
+aiofiles==23.2.1
+
+# Logging and monitoring
+structlog==23.2.0
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Optional: Machine learning libraries
+numpy==1.24.3
+requests==2.31.0
+
+# Development dependencies (commented out for production)
+# pytest==7.4.3
+# pytest-asyncio==0.21.1
+# black==23.11.0
+# flake8==6.1.0
