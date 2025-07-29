@@ -18,6 +18,7 @@ tauros-bot/temp/
 # Data directories
 data/
 tauros-bot/data/
+!tauros-bot/data/personality.json
 tauros-backend/data/
 
 # Python
