@@ -1,6 +1,6 @@
 # Core dependencies
 python-telegram-bot==20.7
-aiohttp==3.9.3
+aiohttp==3.12.14
 redis[hiredis]==5.0.1
 
 # Data handling
@@ -16,7 +16,7 @@ pytz==2023.3
 
 # Optional: Machine learning libraries
 numpy==1.24.3
-requests==2.31.0
+requests==2.32.4
 
 # Development dependencies (commented out for production)
 # pytest==7.4.3
