@@ -27,7 +27,7 @@ interface SettingItem {
   onValueChange?: (value: boolean) => void;
 }
 
-export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation }) => {
+export const SettingsScreen: React.FC<any> = ({ navigation }) => {
   // State Management
   const [gptMode, setGptMode] = useState<boolean>(true);
   const [notifications, setNotifications] = useState<boolean>(true);

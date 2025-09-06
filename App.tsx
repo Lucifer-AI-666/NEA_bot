@@ -92,7 +92,7 @@ const App: React.FC = () => {
               headerShown: false,
             }}
           >
-            {(props) => (
+            {(props: any) => (
               <ErrorBoundary fallbackMessage="Errore nel caricamento della chat">
                 <Suspense fallback={<LoadingFallback />}>
                   <ChatScreen {...props} />
@@ -109,7 +109,7 @@ const App: React.FC = () => {
               headerShown: false,
             }}
           >
-            {(props) => (
+            {(props: any) => (
               <ErrorBoundary fallbackMessage="Errore nel caricamento delle impostazioni">
                 <Suspense fallback={<LoadingFallback />}>
                   <SettingsScreen {...props} />

@@ -28,12 +28,12 @@ interface ChatMessage {
   timestamp: Date;
 }
 
-export const ChatScreen: React.FC<ChatScreenProps> = ({ navigation }) => {
+export const ChatScreen: React.FC<any> = ({ navigation }) => {
   // State Management
   const [message, setMessage] = useState<string>('');
   const [currentResponse, setCurrentResponse] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [chatHistory, setChatHistory] = useState<ChatMessage[]>([]);
+  const [, setChatHistory] = useState<ChatMessage[]>([]);
 
   // Handle message sending with proper error handling
   const handleSend = useCallback(async () => {
@@ -58,7 +58,7 @@ export const ChatScreen: React.FC<ChatScreenProps> = ({ navigation }) => {
         response: responseText,
         timestamp: new Date(),
       };
-      setChatHistory(prev => [...prev, newMessage]);
+      setChatHistory((prev: ChatMessage[]) => [...prev, newMessage]);
 
     } catch (error) {
       console.error('Chat error:', error);
