@@ -17,7 +17,6 @@ import {
   Platform,
 } from 'react-native';
 import { theme } from '../theme';
-import { ChatScreenProps } from '../types/navigation';
 import { ROUTES } from '../constants/routes';
 import { chatAPI, APIError } from '../utils/api';
 

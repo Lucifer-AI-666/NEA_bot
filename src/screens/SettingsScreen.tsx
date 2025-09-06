@@ -15,7 +15,6 @@ import {
   Alert,
 } from 'react-native';
 import { theme } from '../theme';
-import { SettingsScreenProps } from '../types/navigation';
 
 interface SettingItem {
   id: string;
