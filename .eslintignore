@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+.expo
+sqlite3*.js
+sqlite3*.mjs
+SqliteTestUtil.js
+*.wasm
+*.css
+*.html

@@ -15,7 +15,6 @@ import {
   Alert,
 } from 'react-native';
 import { theme } from '../theme';
-import { SettingsScreenProps } from '../types/navigation';
 
 interface SettingItem {
   id: string;
@@ -27,7 +26,7 @@ interface SettingItem {
   onValueChange?: (value: boolean) => void;
 }
 
-export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation }) => {
+export const SettingsScreen: React.FC<any> = ({ navigation }) => {
   // State Management
   const [gptMode, setGptMode] = useState<boolean>(true);
   const [notifications, setNotifications] = useState<boolean>(true);

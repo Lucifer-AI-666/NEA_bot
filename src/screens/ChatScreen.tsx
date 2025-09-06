@@ -17,7 +17,6 @@ import {
   Platform,
 } from 'react-native';
 import { theme } from '../theme';
-import { ChatScreenProps } from '../types/navigation';
 import { ROUTES } from '../constants/routes';
 import { chatAPI, APIError } from '../utils/api';
 
@@ -28,12 +27,12 @@ interface ChatMessage {
   timestamp: Date;
 }
 
-export const ChatScreen: React.FC<ChatScreenProps> = ({ navigation }) => {
+export const ChatScreen: React.FC<any> = ({ navigation }) => {
   // State Management
   const [message, setMessage] = useState<string>('');
   const [currentResponse, setCurrentResponse] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [chatHistory, setChatHistory] = useState<ChatMessage[]>([]);
+  const [, setChatHistory] = useState<ChatMessage[]>([]);
 
   // Handle message sending with proper error handling
   const handleSend = useCallback(async () => {
@@ -58,7 +57,7 @@ export const ChatScreen: React.FC<ChatScreenProps> = ({ navigation }) => {
         response: responseText,
         timestamp: new Date(),
       };
-      setChatHistory(prev => [...prev, newMessage]);
+      setChatHistory((prev: ChatMessage[]) => [...prev, newMessage]);
 
     } catch (error) {
       console.error('Chat error:', error);

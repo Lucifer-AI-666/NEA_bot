@@ -3,7 +3,7 @@
  * Centralized API communication utilities
  */
 
-import axios, { AxiosError, AxiosResponse } from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
 // API Configuration
 export const API_CONFIG = {
@@ -40,7 +40,7 @@ export const chatAPI = {
         message,
       });
       return response.data;
-    } catch (error) {
+    } catch (error: any) {
       if (axios.isAxiosError(error)) {
         throw new APIError(
           error.message || 'Network error',

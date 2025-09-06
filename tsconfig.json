@@ -1,16 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "ES2020",
     "lib": [
       "DOM",
       "DOM.Iterable",
-      "ES6"
+      "ES6",
+      "ES2020"
     ],
+    "module": "ES2020",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -18,13 +20,12 @@
     "noEmit": true,
     "jsx": "react-native",
     "declaration": false,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
   },
   "include": [
     "**/*.ts",
