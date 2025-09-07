@@ -40,7 +40,7 @@ export const chatAPI = {
         message,
       });
       return response.data;
-    } catch (error: any) {
+    } catch (error: unknown) {
       if (axios.isAxiosError(error)) {
         throw new APIError(
           error.message || 'Network error',
