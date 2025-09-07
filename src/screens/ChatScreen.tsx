@@ -4,7 +4,7 @@
  * Professional implementation with TypeScript, proper error handling, and modern styling
  */
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { 
   View, 
   Text, 
@@ -34,6 +34,20 @@ export const ChatScreen: React.FC<ChatScreenProps> = ({ navigation }) => {
   const [currentResponse, setCurrentResponse] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [chatHistory, setChatHistory] = useState<ChatMessage[]>([]);
+  const [hasTriggeredWriting, setHasTriggeredWriting] = useState<boolean>(false);
+
+  // Implement "anche questo" - start writing functionality like bar.txt
+  useEffect(() => {
+    if (!hasTriggeredWriting) {
+      // Set a brief delay to allow the UI to load, then trigger the writing prompt
+      const timer = setTimeout(() => {
+        setCurrentResponse('Quando leggi questo, comincia a scrivere. Ora inizia la tua conversazione con TAUROS...');
+        setHasTriggeredWriting(true);
+      }, 1500);
+
+      return () => clearTimeout(timer);
+    }
+  }, [hasTriggeredWriting]);
 
   // Handle message sending with proper error handling
   const handleSend = useCallback(async () => {
@@ -106,7 +120,7 @@ export const ChatScreen: React.FC<ChatScreenProps> = ({ navigation }) => {
           <Text style={styles.responseText}>{currentResponse}</Text>
         ) : (
           <Text style={styles.placeholderText}>
-            Ciao! Sono TAUROS, il tuo assistente AI. Come posso aiutarti oggi?
+            Ciao! Sono TAUROS, il tuo assistente AI. Sto per dirti qualcosa di importante...
           </Text>
         )}
       </ScrollView>
