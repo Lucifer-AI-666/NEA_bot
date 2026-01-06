@@ -4,7 +4,7 @@ uvicorn[standard]==0.24.0
 pydantic==2.5.1
 
 # HTTP client and Redis
-aiohttp==3.12.14
+aiohttp==3.13.3
 redis[hiredis]==5.0.1
 
 # Environment and configuration
