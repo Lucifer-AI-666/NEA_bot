@@ -1,6 +1,6 @@
 # Core dependencies
 python-telegram-bot==20.7
-aiohttp==3.12.14
+aiohttp==3.13.3
 redis[hiredis]==5.0.1
 
 # Data handling
