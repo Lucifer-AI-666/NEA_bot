@@ -16,7 +16,7 @@ pytz==2023.3
 
 # Optional: Machine learning libraries
 numpy==1.24.3
-requests==2.32.4
+requests==2.33.0
 
 # Development dependencies (commented out for production)
 # pytest==7.4.3
